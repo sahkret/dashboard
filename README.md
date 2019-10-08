@@ -1,0 +1,1 @@
+This project consists of a CMS dashboard layout.<br>It's just the "front page", but this is the general concept.<br>Crafted in the forges of HTML, SCSS, Gulp & jQuery.
