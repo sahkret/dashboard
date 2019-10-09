@@ -5,14 +5,37 @@
 
 @import "../node_modules/material-design-icons/iconfont/material-icons.css";
 
-// ---For variables---
+// ---Variables---
 
 $bgClr: #ced4da;
 $primeClr: #e9ecef;
+
+// ---Mixins---
+
+@mixin primeClr(){
+  background-color: $primeClr;
+}
+
+@mixin bgClr(){
+  background-color: $bgClr;
+}
 
 // ---CSS---
 
 * {
   box-sizing: border-box;
 }
+body {
+  @include bgClr;
 
+  .container {
+    @include primeClr;
+
+    .card {
+      height: 30vh;
+
+    }
+  }
+
+
+}
