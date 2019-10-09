@@ -8,6 +8,7 @@
     <meta name="copyright" content="I am but a poor student.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -16,7 +17,59 @@
 </div>
 
 <!--WE WANT OUR NAV AT THE BOTTOM-->
-<nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar fixed-bottom navbar-dark bg-dark p-0">
+    <ul class="navbar-nav d-flex flex-row m-auto dropup">
+        <!--Dashboard-->
+        <li class="nav-item mx-3">
+            <a class="nav-link dropdown-toggle nav__dashboard" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">dashboard</i></a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Home</a>
+                <a class="dropdown-item" href="#">Updates</a>
+            </div>
+        </li>
+        <!--Products-->
+        <li class="nav-item mx-3">
+            <a class="nav-link dropdown-toggle nav__products" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">store</i></a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">View Products</a>
+                <a class="dropdown-item" href="#">Add Product(s)</a>
+                <a class="dropdown-item" href="#">Edit Products</a>
+                <a class="dropdown-item" href="#">Edit Sales</a>
+            </div>
+        </li>
+        <!--Orders-->
+        <li class="nav-item mx-3">
+            <a class="nav-link dropdown-toggle nav__orders" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">shopping_cart</i></a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">New Orders</a>
+                <a class="dropdown-item" href="#">Order History</a>
+                <a class="dropdown-item" href="#">Personal Data</a>
+            </div>
+        </li>
+        <!--Tools-->
+        <li class="nav-item mx-3">
+            <a class="nav-link dropdown-toggle nav__tools" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">build</i></a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Available Tools</a>
+                <a class="dropdown-item" href="#">Edit Pages</a>
+                <a class="dropdown-item" href="#">Site Health</a>
+                <a class="dropdown-item" href="#">SEO</a>
+            </div>
+        </li>
+        <!--Settings-->
+        <li class="nav-item mx-3">
+            <a class="nav-link dropdown-toggle nav__settings" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">settings_applications</i></a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">General</a>
+                <a class="dropdown-item" href="#">Pricing Standards</a>
+                <a class="dropdown-item" href="#">Security and Logins</a>
+                <a class="dropdown-item" href="#">Payments</a>
+                <a class="dropdown-item" href="#">Language and Region</a>
+                <a class="dropdown-item" href="#">Documentation</a>
+                <a class="dropdown-item" href="#">Logout</a>
+            </div>
+        </li>
+    </ul>
 </nav>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
