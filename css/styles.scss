@@ -9,6 +9,7 @@
 
 $bgClr: #ced4da;
 $primeClr: #e9ecef;
+$padDefault: 0.5rem;
 
 // ---Mixins---
 
@@ -20,15 +21,32 @@ $primeClr: #e9ecef;
   background-color: $bgClr;
 }
 
+@mixin brdrB(){
+  border-bottom: $padDefault / 2 solid rgba(0,0,0,0.6);
+}
+
 // ---CSS---
 
 * {
   box-sizing: border-box;
 }
+
 body {
-  @include bgClr;
+  @include primeClr;
+
+  .container-fluid {
+    color: #f9f9f9;
+    padding: $padDefault;
+    font-style: italic;
+    text-shadow: 1px 1px #000;
+
+    @include bgClr;
+    @include brdrB;
+  }
 
   .container {
+    padding-top: $padDefault * 2;
+    padding-bottom: $padDefault * 8;
     @include primeClr;
 
     .card {
@@ -36,6 +54,4 @@ body {
 
     }
   }
-
-
 }
