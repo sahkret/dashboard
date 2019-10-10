@@ -4,3 +4,6 @@ jQuery(function($) {
 
 
 });
+
+// ---Oh my, there's no jQuery in here!---
+// ---Waste of space, delete before upload---

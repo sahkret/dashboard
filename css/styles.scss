@@ -4,6 +4,7 @@
 // ---Imports---
 
 @import "../node_modules/material-design-icons/iconfont/material-icons.css";
+@import "media";
 
 // ---Variables---
 
@@ -12,12 +13,6 @@ $primeClr: #e9ecef;
 $padDefault: 0.5rem;
 $font: 1rem;
 $txtClr: #f9f9f9;
-$note: "screen and (min-width: 576px)";
-$inbetween: "screen and (min-width: 766px)";
-$tablet: "screen and (min-width: 996px)";
-$teneighty: "screen and (min-width: 1500px)";
-$twofive: "screen and (min-width: 2000px)";
-$threekay: "screen and (min-width: 2550px)";
 
 // ---Mixins---
 
@@ -60,14 +55,16 @@ body {
   .container {
     padding-top: $padDefault * 2;
     padding-bottom: $padDefault * 8;
+
     @include primeClr;
 
     .card {
       height: 25vh;
 
       h5{
-        @include brdrB($padDefault / 4);
         padding-bottom: $padDefault;
+
+        @include brdrB($padDefault / 4);
       }
 
       p{
@@ -182,10 +179,8 @@ body {
   .container{
     margin: 15vh auto;
 
-
     .col-sm-6 {
       @include flex;
-
     }
 
     .card p{
