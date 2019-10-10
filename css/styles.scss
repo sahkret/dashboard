@@ -12,6 +12,12 @@ $primeClr: #e9ecef;
 $padDefault: 0.5rem;
 $font: 1rem;
 $txtClr: #f9f9f9;
+$note: "screen and (min-width: 576px)";
+$inbetween: "screen and (min-width: 766px)";
+$tablet: "screen and (min-width: 996px)";
+$teneighty: "screen and (min-width: 1500px)";
+$twofive: "screen and (min-width: 2000px)";
+$threekay: "screen and (min-width: 2550px)";
 
 // ---Mixins---
 
@@ -25,6 +31,11 @@ $txtClr: #f9f9f9;
 
 @mixin brdrB($brdrThick: $padDefault / 2){
   border-bottom: $brdrThick solid rgba(0,0,0,0.6);
+}
+
+@mixin flex(){
+  flex: 0 0 50%;
+  max-width: 50%;
 }
 
 // ---CSS---
@@ -72,6 +83,113 @@ body {
     .dropdown-menu {
       background-color: darken($bgClr, 10);
       color: $txtClr;
+    }
+  }
+}
+
+@media #{$note} {
+  h1{
+    padding-left: $padDefault * 2;
+  }
+
+  .col-sm-6{
+    flex: none;
+    max-width: 100%;
+  }
+}
+
+@media #{$inbetween} {
+  h1{
+    padding-left: $padDefault * 3;
+  }
+
+  .container {
+    margin: 15vh auto;
+
+
+    .col-sm-6 {
+      @include flex;
+    }
+
+    .card p{
+      margin: 4rem auto !important;
+    }
+  }
+}
+
+@media #{$tablet} {
+  h1{
+    padding-left: $padDefault * 4;
+  }
+
+  .container {
+    margin: 15vh auto;
+
+
+    .col-sm-6 {
+      @include flex;
+    }
+
+    .card p{
+      margin: 4rem auto !important;
+    }
+  }
+}
+
+@media #{$teneighty} {
+  h1{
+    padding-left: $padDefault * 8;
+  }
+
+  .container {
+    margin: 15vh auto;
+
+
+    .col-sm-6 {
+      @include flex;
+    }
+
+    .card p{
+      margin: 4rem auto !important;
+    }
+  }
+}
+
+@media #{$twofive} {
+  h1{
+    padding-left: $padDefault * 30;
+  }
+
+  .container {
+    margin: 15vh auto;
+
+
+    .col-sm-6 {
+      @include flex;
+    }
+
+    .card p{
+      margin: 4rem auto !important;
+    }
+  }
+}
+
+@media #{$threekay} {
+  h1{
+    padding-left: $padDefault * 50;
+  }
+
+  .container{
+    margin: 15vh auto;
+
+
+    .col-sm-6 {
+      @include flex;
+
+    }
+
+    .card p{
+      margin: 4rem auto !important;
     }
   }
 }
