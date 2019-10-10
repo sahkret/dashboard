@@ -10,6 +10,8 @@
 $bgClr: #ced4da;
 $primeClr: #e9ecef;
 $padDefault: 0.5rem;
+$font: 1rem;
+$txtClr: #f9f9f9;
 
 // ---Mixins---
 
@@ -21,8 +23,8 @@ $padDefault: 0.5rem;
   background-color: $bgClr;
 }
 
-@mixin brdrB(){
-  border-bottom: $padDefault / 2 solid rgba(0,0,0,0.6);
+@mixin brdrB($brdrThick: $padDefault / 2){
+  border-bottom: $brdrThick solid rgba(0,0,0,0.6);
 }
 
 // ---CSS---
@@ -35,7 +37,7 @@ body {
   @include primeClr;
 
   .container-fluid {
-    color: #f9f9f9;
+    color: $txtClr;
     padding: $padDefault;
     font-style: italic;
     text-shadow: 1px 1px #000;
@@ -50,8 +52,26 @@ body {
     @include primeClr;
 
     .card {
-      height: 30vh;
+      height: 25vh;
 
+      h5{
+        @include brdrB($padDefault / 4);
+        padding-bottom: $padDefault;
+      }
+
+      p{
+        font-size: $font * 2.5;
+        font-weight: 900;
+        margin: 2rem auto;
+      }
+    }
+  }
+
+  nav {
+
+    .dropdown-menu {
+      background-color: darken($bgClr, 10);
+      color: $txtClr;
     }
   }
 }
